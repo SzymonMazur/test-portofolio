@@ -1,3 +1,29 @@
 <template>
-    <h1>Landingpage</h1>
+
+        <section class="container pt-5">
+            <skum-list></skum-list>
+        </section>
 </template>
+
+<script>
+import SkumList from '@/components/case-studies/SkumList.vue'
+export default {
+  components: { SkumList },
+    
+}
+</script>
+
+<style>
+.skum-title{
+    color: #ECAE12 !important;
+    font-weight: bold;
+    font-size: 64px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skum-des{
+    color: #0D0D0D !important;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+</style>
