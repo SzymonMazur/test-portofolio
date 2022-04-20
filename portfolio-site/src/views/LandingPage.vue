@@ -1,14 +1,20 @@
 <template>
-
+    <main>
         <section class="container pt-5">
             <skum-list></skum-list>
         </section>
+
+    </main>
+
+
+        <my-footer></my-footer>
 </template>
 
 <script>
 import SkumList from '@/components/case-studies/SkumList.vue'
+import MyFooter from '@/components/My-footer.vue'
 export default {
-  components: { SkumList },
+  components: { SkumList, MyFooter, },
     
 }
 </script>
@@ -26,4 +32,6 @@ export default {
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
 }
+
+
 </style>
