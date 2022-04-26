@@ -27,10 +27,6 @@
 
 <style scoped>
 
-#test{
-     
-}
-
 .navbar-brand{
     color: rgb(255, 255, 255) !important;
     font-family: Montserrat, sans-serif !important;

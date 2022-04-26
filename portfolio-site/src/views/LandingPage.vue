@@ -1,13 +1,12 @@
 <template>
-    <main>
+    <main class="">
         <section class="container pt-5">
             <skum-list></skum-list>
         </section>
-
+    
+        <my-footer></my-footer>
     </main>
 
-
-        <my-footer></my-footer>
 </template>
 
 <script>
