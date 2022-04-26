@@ -1,5 +1,5 @@
 <template>
-    <header class="header-container h-100">
+    <header class="header-container container-fluid h-100">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center mb-5">
                 <h1 class="skum-heading">SKUM</h1>
@@ -34,5 +34,11 @@
 
 .row{
 height: 100vh;
+}
+
+@media screen and (max-width:768px){
+    .skum-heading{
+        font-size: 80px;
+    }
 }
 </style>
