@@ -118,7 +118,7 @@
   <!-- End of user- scenarios -->
 
   <!-- Conceptual model -->
-  <article class="row pb-5">
+  <article class="row pb-5 mt-5">
     <div class="col-12">
         <h3 class="fs-5 mt-5" style="font-weight: 700;">CONCEPTUAL MODEL</h3>
       </div>
@@ -135,7 +135,7 @@
   </article>
 
   <!-- Sitemap -->
-  <article class="row pb-5">
+  <article class="row pb-5 mt-5">
     <div class="col-12">
         <h3 class="fs-5 mt-5" style="font-weight: 700;">SITEMAP</h3>
     </div>
@@ -265,7 +265,33 @@
       <p class="about-projext-txt">In some <strong>parts</strong> of the process, it was <strong>difficult</strong> to keep the <strong>user</strong> in mind, and we forgot that 
                   we designed for the users and not ourselves.  </p>
     </div>
+  </article>
 
+<!-- Challenges -->
+  <article class="row pt-5 mt-5">
+    <div class="col-12">
+      <h3 class="fs-5 mt-5" style="font-weight: 700;">What did i learn?</h3>
+    </div>
+
+    <div class="col-12 col-md-9 mt-5">
+      <p class="about-projext-txt">When you work in groups its <strong>important</strong> to let every teammember to pitch their own
+        <strong>ideas, toughts and solutions.</strong> Its important to let someone take <strong>charge</strong> and make a strict schedule that the 
+        whole team follows.     </p>
+    </div>
+    <div class="col-12 col-md-9 mt-5">
+      <p class="about-projext-txt">We only <strong>conducted</strong> one usability test because the time we was given and two other ongoing exams.
+              From working on this project I <strong>learned</strong> that one should test more often, it dosn`t need to 
+              be a usability test, it can be a survey or a Guerrilla testing. One of the most <strong>important</strong> things is to 
+              gain <strong>insight</strong> into what the users think and why. It is for the <strong>users</strong> we are going to create a 
+              solution and not for us! </p>
+    </div>
+  </article>
+
+  <article class="row py-5">
+    <div class="col-12 text-center" @click="toTop">
+        <i class="fs-1 bi bi-arrow-up-circle"></i>
+
+    </div>
   </article>
 
   </main>
@@ -276,11 +302,30 @@
 import SkumHeader from "@/components/skum-case-study/Skum-header.vue";
 
 export default {
-  setup() {},
+  mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      handleScroll: function () {
+        if (this.scTimer) return;
+        this.scTimer = setTimeout(() => {
+          this.scY = window.scrollY;
+          clearTimeout(this.scTimer);
+          this.scTimer = 0;
+        }, 100);
+      },
+      toTop: function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      },
+},
 
   components: {
     SkumHeader,
   },
+
 };
 </script>
 
@@ -288,6 +333,14 @@ export default {
 
 .container {
   font-family: Montserrat, sans-serif;
+}
+
+.bi-arrow-up-circle{
+  cursor: pointer;
+}
+
+.bi-arrow-up-circle:hover{
+  color: #ECAE12;
 }
 
 .bi-building{
