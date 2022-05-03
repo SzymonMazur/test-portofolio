@@ -290,7 +290,6 @@
   <article class="row py-5">
     <div class="col-12 text-center" @click="toTop">
         <i class="fs-1 bi bi-arrow-up-circle"></i>
-
     </div>
   </article>
 
