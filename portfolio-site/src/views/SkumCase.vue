@@ -268,7 +268,7 @@
   </article>
 
 <!-- Challenges -->
-  <article class="row pt-5 mt-5">
+  <article class="row pt-5 ">
     <div class="col-12">
       <h3 class="fs-5 mt-5" style="font-weight: 700;">What did i learn?</h3>
     </div>
